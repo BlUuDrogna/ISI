@@ -15,8 +15,8 @@ namespace CHOC
     public partial class CarebagManagement : Form
     {
         OleDbConnection myConnection;
-        public string DBFile = Directory.GetCurrentDirectory() + "/CHOC.accdb";
-        public string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0 ;Data Source =";
+        public string DBFile = Directory.GetCurrentDirectory() + "/General Products.mdb";
+        public string connectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=";
         public int globalCounter = 0;
         public object[] ItemArr;
         public int totalAvailable = 0;
@@ -103,8 +103,9 @@ namespace CHOC
             }
             catch (Exception ex)
             {
-                myConnection.Close();
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                myConnection.Close();
+                
             }
         }
 
@@ -219,6 +220,7 @@ namespace CHOC
             myConnection = new OleDbConnection(connectionString + DBFile);
             myConnection.Open();
 
+
             using (OleDbCommand command = new OleDbCommand($"SELECT Item_Name FROM General_Items ORDER BY Item_name ASC", myConnection))
             {
                 //whenever you want to get some data from the database
@@ -232,6 +234,7 @@ namespace CHOC
             }
             myConnection.Close();
         }
+
         public void clearAll()
         {
             cbxItemQty.Items.Clear();
@@ -240,7 +243,6 @@ namespace CHOC
             listView1.Items.Clear();
             txtCBNum.Text = null;
         }
-
     }
 }
 

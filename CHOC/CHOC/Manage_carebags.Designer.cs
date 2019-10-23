@@ -63,9 +63,11 @@
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.cbxItems);
             this.groupBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(16, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(679, 514);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(905, 633);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Items";
@@ -74,9 +76,10 @@
             // 
             this.btnRemoveItem.BackColor = System.Drawing.Color.SkyBlue;
             this.btnRemoveItem.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveItem.Location = new System.Drawing.Point(501, 450);
+            this.btnRemoveItem.Location = new System.Drawing.Point(668, 554);
+            this.btnRemoveItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRemoveItem.Name = "btnRemoveItem";
-            this.btnRemoveItem.Size = new System.Drawing.Size(164, 48);
+            this.btnRemoveItem.Size = new System.Drawing.Size(219, 59);
             this.btnRemoveItem.TabIndex = 20;
             this.btnRemoveItem.Text = "Remove Item";
             this.btnRemoveItem.UseVisualStyleBackColor = false;
@@ -89,9 +92,10 @@
             this.Item_Quantity,
             this.Total_Quantity_Available});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(6, 204);
+            this.listView1.Location = new System.Drawing.Point(8, 251);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(667, 231);
+            this.listView1.Size = new System.Drawing.Size(888, 283);
             this.listView1.TabIndex = 19;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -115,9 +119,10 @@
             // 
             this.btnAddItem.BackColor = System.Drawing.Color.SkyBlue;
             this.btnAddItem.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddItem.Location = new System.Drawing.Point(507, 126);
+            this.btnAddItem.Location = new System.Drawing.Point(676, 155);
+            this.btnAddItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(164, 48);
+            this.btnAddItem.Size = new System.Drawing.Size(219, 59);
             this.btnAddItem.TabIndex = 18;
             this.btnAddItem.Text = "Add Item";
             this.btnAddItem.UseVisualStyleBackColor = false;
@@ -127,44 +132,49 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(358, 22);
+            this.label4.Location = new System.Drawing.Point(477, 27);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(307, 15);
+            this.label4.Size = new System.Drawing.Size(393, 20);
             this.label4.TabIndex = 16;
             this.label4.Text = "Default Quantity of items added to carebag is 1";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 144);
+            this.label3.Location = new System.Drawing.Point(13, 177);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(292, 18);
+            this.label3.Size = new System.Drawing.Size(359, 23);
             this.label3.TabIndex = 15;
             this.label3.Text = "Quantity of items to add to carebag:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(54, 71);
+            this.label2.Location = new System.Drawing.Point(72, 87);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(248, 18);
+            this.label2.Size = new System.Drawing.Size(304, 23);
             this.label2.TabIndex = 14;
             this.label2.Text = "Select Item to add to carebag:";
             // 
             // cbxItemQty
             // 
             this.cbxItemQty.FormattingEnabled = true;
-            this.cbxItemQty.Location = new System.Drawing.Point(308, 141);
+            this.cbxItemQty.Location = new System.Drawing.Point(411, 174);
+            this.cbxItemQty.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxItemQty.Name = "cbxItemQty";
-            this.cbxItemQty.Size = new System.Drawing.Size(164, 26);
+            this.cbxItemQty.Size = new System.Drawing.Size(217, 31);
             this.cbxItemQty.TabIndex = 13;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(535, 71);
+            this.checkBox1.Location = new System.Drawing.Point(713, 87);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(136, 22);
+            this.checkBox1.Size = new System.Drawing.Size(167, 27);
             this.checkBox1.TabIndex = 12;
             this.checkBox1.Text = "Multiple Items";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -173,9 +183,10 @@
             // cbxItems
             // 
             this.cbxItems.FormattingEnabled = true;
-            this.cbxItems.Location = new System.Drawing.Point(308, 68);
+            this.cbxItems.Location = new System.Drawing.Point(411, 84);
+            this.cbxItems.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxItems.Name = "cbxItems";
-            this.cbxItems.Size = new System.Drawing.Size(215, 26);
+            this.cbxItems.Size = new System.Drawing.Size(285, 31);
             this.cbxItems.TabIndex = 11;
             this.cbxItems.SelectedIndexChanged += new System.EventHandler(this.CbxItems_SelectedIndexChanged);
             // 
@@ -183,9 +194,10 @@
             // 
             this.btnManageCB.BackColor = System.Drawing.Color.SkyBlue;
             this.btnManageCB.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageCB.Location = new System.Drawing.Point(513, 532);
+            this.btnManageCB.Location = new System.Drawing.Point(684, 655);
+            this.btnManageCB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnManageCB.Name = "btnManageCB";
-            this.btnManageCB.Size = new System.Drawing.Size(164, 48);
+            this.btnManageCB.Size = new System.Drawing.Size(219, 59);
             this.btnManageCB.TabIndex = 12;
             this.btnManageCB.Text = "Create carebags";
             this.btnManageCB.UseVisualStyleBackColor = false;
@@ -194,9 +206,10 @@
             // txtCBNum
             // 
             this.txtCBNum.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.txtCBNum.Location = new System.Drawing.Point(267, 544);
+            this.txtCBNum.Location = new System.Drawing.Point(356, 670);
+            this.txtCBNum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCBNum.Name = "txtCBNum";
-            this.txtCBNum.Size = new System.Drawing.Size(240, 26);
+            this.txtCBNum.Size = new System.Drawing.Size(319, 31);
             this.txtCBNum.TabIndex = 11;
             // 
             // label1
@@ -204,9 +217,10 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.label1.Location = new System.Drawing.Point(9, 547);
+            this.label1.Location = new System.Drawing.Point(12, 673);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(252, 18);
+            this.label1.Size = new System.Drawing.Size(311, 23);
             this.label1.TabIndex = 13;
             this.label1.Text = "Number of carebags to create:";
             // 
@@ -214,9 +228,10 @@
             // 
             this.btnBack.BackColor = System.Drawing.Color.SkyBlue;
             this.btnBack.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(12, 575);
+            this.btnBack.Location = new System.Drawing.Point(16, 708);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(164, 48);
+            this.btnBack.Size = new System.Drawing.Size(219, 59);
             this.btnBack.TabIndex = 14;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -224,17 +239,18 @@
             // 
             // CarebagManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(703, 635);
+            this.ClientSize = new System.Drawing.Size(937, 782);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnManageCB);
             this.Controls.Add(this.txtCBNum);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CarebagManagement";
             this.Text = "Carebag Management";
             this.groupBox1.ResumeLayout(false);
