@@ -127,100 +127,144 @@ namespace CHOC
 
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
-            myConnection.Open();
-            DateTime donationDate = monthCalendar1.SelectionStart;
-
-            if (cbxItems.SelectedItem == null)
+            try
             {
-                MessageBox.Show("Please select an item name");
+                myConnection.Open();
+                DateTime donationDate = monthCalendar1.SelectionStart;
+
+                if (cbxItems.SelectedItem == null)
+                {
+                    MessageBox.Show("Please select an item name");
+                    myConnection.Close();
+                    return;
+                }
+                String itemName = cbxItems.SelectedItem.ToString();
+
+
+                if (string.IsNullOrEmpty(tbxDonorName.Text.ToString()))
+                {
+                    MessageBox.Show("Please insert a donor name");
+                    myConnection.Close();
+                    return;
+                }
+                String donorName = tbxDonorName.Text.ToString();
+
+
+                if (cbxCategoryTypes.SelectedItem == null)
+                {
+                    MessageBox.Show("Please select a category name");
+                    myConnection.Close();
+                    return;
+                }
+                String categoryType = cbxCategoryTypes.SelectedItem.ToString();
+
+                int donationQuantity = Convert.ToInt32(nudQuantity.Value);
+                if (donationQuantity < 0)
+                {
+                    MessageBox.Show("Donation amount cannot be negative");
+                    myConnection.Close();
+                    return;
+                }
+                else if (donationQuantity == 0)
+                {
+                    MessageBox.Show("Donation amount must be more than 0");
+                    myConnection.Close();
+                    return;
+                }
+
+                ds = new DataSet();
+                adapter = new OleDbDataAdapter("INSERT into [General_Donations] ([Donor_Date],[Donor_Category],[Donor_Name],[Item_Name],[Qty_Received]) VALUES " + "('" + donationDate + "','" + categoryType + "','" + donorName + "','" + itemName + "','" + donationQuantity + "')", myConnection);
+                adapter.Fill(ds, "General_Donations");
+                OleDbCommand updateItems = new OleDbCommand($"UPDATE General_Items SET Stock_Level = Stock_Level+'" + donationQuantity + "' WHERE Item_Name = '" + itemName + "'", myConnection);
+                updateItems.ExecuteNonQuery();
                 myConnection.Close();
-                return;
+                nudQuantity.Value = 0;
+                tbxDonorName.Clear();
+                cbxCategoryTypes.SelectedIndex = -1;
+                cbxItems.SelectedIndex = -1;
+                getRecords();
             }
-            String itemName = cbxItems.SelectedItem.ToString();
-
-
-            if (string.IsNullOrEmpty(tbxDonorName.Text.ToString()))
+            catch (Exception ex)
             {
-                MessageBox.Show("Please insert a donor name");
-                myConnection.Close();
-                return;
-            }
-            String donorName = tbxDonorName.Text.ToString();
+                MessageBox.Show("Unexpected error. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                myConnection = new OleDbConnection(connectionString + DBFile);
+                getRecords();
+                myConnection.Open();
 
-            if (cbxCategoryTypes.SelectedItem == null)
-            {
-                MessageBox.Show("Please select a category name");
-                myConnection.Close();
-                return;
-            }
-            String categoryType = cbxCategoryTypes.SelectedItem.ToString();
+                using (OleDbCommand command = new OleDbCommand($"SELECT Item_Name FROM General_Items ORDER BY Item_name ASC", myConnection))
+                {
 
-            int donationQuantity = Convert.ToInt32(nudQuantity.Value);
-            if (donationQuantity < 0)
-            {
-                MessageBox.Show("Donation amount cannot be negative");
+                    //whenever you want to get some data from the database
+                    using (OleDbDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            cbxItems.Items.Add(reader["Item_Name"].ToString());
+                        }
+                    }
+                }
                 myConnection.Close();
-                return;
             }
-            else if (donationQuantity == 0)
-            {
-                MessageBox.Show("Donation amount must be more than 0");
-                myConnection.Close();
-                return;
-            }
-
-            ds = new DataSet();
-            adapter = new OleDbDataAdapter("INSERT into [General_Donations] ([Donor_Date],[Donor_Category],[Donor_Name],[Item_Name],[Qty_Received]) VALUES " + "('" + donationDate + "','" + categoryType + "','" + donorName + "','" + itemName + "','" + donationQuantity + "')", myConnection);
-            adapter.Fill(ds, "General_Donations");
-            OleDbCommand updateItems = new OleDbCommand($"UPDATE General_Items SET Stock_Level = Stock_Level+'" + donationQuantity + "' WHERE Item_Name = '" + itemName + "'", myConnection);
-            updateItems.ExecuteNonQuery();
-            myConnection.Close();
-            nudQuantity.Value = 0;
-            tbxDonorName.Clear();
-            cbxCategoryTypes.SelectedIndex = -1;
-            cbxItems.SelectedIndex = -1;
-            getRecords();
         }
 
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
-            myConnection.Open();
-            int i = dgvDonorRecords.CurrentRow.Index;
-            currentID = dgvDonorRecords[0, i].Value.ToString();
-            int donationQuantity = Convert.ToInt32(dgvDonorRecords[5, i].Value);
-            string itemName = dgvDonorRecords[4, i].Value.ToString();
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this record?", "Deleting record",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    myConnection.Open();
+                    int i = dgvDonorRecords.CurrentRow.Index;
+                    currentID = dgvDonorRecords[0, i].Value.ToString();
+                    int donationQuantity = Convert.ToInt32(dgvDonorRecords[5, i].Value);
+                    string itemName = dgvDonorRecords[4, i].Value.ToString();
 
-            ds = new DataSet();
-            adapter = new OleDbDataAdapter("DELETE from [General_Donations] where Donor_ID = " + currentID, myConnection);
-            adapter.Fill(ds, "General_Donations");
-            OleDbCommand deleteItems = new OleDbCommand($"UPDATE General_Items SET Stock_Level = Stock_Level-'" + donationQuantity + "' WHERE Item_Name = '" + itemName + "'", myConnection);
-            deleteItems.ExecuteNonQuery();
-            myConnection.Close();
-            nudQuantity.Value = 0;
-            tbxDonorName.Clear();
-            cbxCategoryTypes.SelectedIndex = -1;
-            cbxItems.SelectedIndex = -1;
-            getRecords();
+                    ds = new DataSet();
+                    adapter = new OleDbDataAdapter("DELETE from [General_Donations] where Donor_ID = " + currentID, myConnection);
+                    adapter.Fill(ds, "General_Donations");
+                    OleDbCommand deleteItems = new OleDbCommand($"UPDATE General_Items SET Stock_Level = Stock_Level-'" + donationQuantity + "' WHERE Item_Name = '" + itemName + "'", myConnection);
+                    deleteItems.ExecuteNonQuery();
+                    myConnection.Close();
+                    nudQuantity.Value = 0;
+                    tbxDonorName.Clear();
+                    cbxCategoryTypes.SelectedIndex = -1;
+                    cbxItems.SelectedIndex = -1;
+                    getRecords();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There are no records to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void BtnEdit_Click_1(object sender, EventArgs e)
         {
-            btnEdit.Visible = false;
-            int i = dgvDonorRecords.CurrentRow.Index;
-            updateTemp = i;
-            currentID = dgvDonorRecords[0, i].Value.ToString();
+            try
+            {
+                btnEdit.Visible = false;
+                int i = dgvDonorRecords.CurrentRow.Index;
+                updateTemp = i;
+                currentID = dgvDonorRecords[0, i].Value.ToString();
 
-            if (cbxCategoryTypes.Items.Contains(dgvDonorRecords[2, i].Value.ToString()))
-                cbxCategoryTypes.SelectedItem = dgvDonorRecords[2, i].Value.ToString();
+                if (cbxCategoryTypes.Items.Contains(dgvDonorRecords[2, i].Value.ToString()))
+                    cbxCategoryTypes.SelectedItem = dgvDonorRecords[2, i].Value.ToString();
 
-            if (cbxItems.Items.Contains(dgvDonorRecords[4, i].Value.ToString()))
-                cbxItems.SelectedItem = dgvDonorRecords[4, i].Value.ToString();
+                if (cbxItems.Items.Contains(dgvDonorRecords[4, i].Value.ToString()))
+                    cbxItems.SelectedItem = dgvDonorRecords[4, i].Value.ToString();
 
-            tbxDonorName.Text = dgvDonorRecords[3, i].Value.ToString();
-            nudQuantity.Value = Convert.ToInt32(dgvDonorRecords[5, i].Value);
-            editCheck = true;
-            btnUpdate.Visible = true;
+                tbxDonorName.Text = dgvDonorRecords[3, i].Value.ToString();
+                nudQuantity.Value = Convert.ToInt32(dgvDonorRecords[5, i].Value);
+                editCheck = true;
+                btnUpdate.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No fields has been selected.", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnEdit.Visible = true;
+            }
         }
 
         private void btnUpdate_Click_1(object sender, EventArgs e)

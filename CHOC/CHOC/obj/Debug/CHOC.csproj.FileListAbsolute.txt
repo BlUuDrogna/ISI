@@ -48,3 +48,28 @@ C:\Users\gvanw\Desktop\Honneurs\Semester 2\ITRI 624 (ISI)\CHOC\CHOC\CHOC\obj\Deb
 C:\Users\gvanw\Desktop\Honneurs\Semester 2\ITRI 624 (ISI)\CHOC\CHOC\CHOC\obj\Debug\CHOC.csproj.CoreCompileInputs.cache
 C:\Users\gvanw\Desktop\Honneurs\Semester 2\ITRI 624 (ISI)\CHOC\CHOC\CHOC\obj\Debug\CHOC.exe
 C:\Users\gvanw\Desktop\Honneurs\Semester 2\ITRI 624 (ISI)\CHOC\CHOC\CHOC\obj\Debug\CHOC.pdb
+D:\Desktop\ISI Project\ISI\CHOC\CHOC\bin\Debug\CHOC.exe.config
+D:\Desktop\ISI Project\ISI\CHOC\CHOC\bin\Debug\CHOC.exe
+D:\Desktop\ISI Project\ISI\CHOC\CHOC\bin\Debug\CHOC.pdb
+D:\Desktop\ISI Project\ISI\CHOC\CHOC\obj\Debug\CHOC.csprojAssemblyReference.cache
+D:\Desktop\ISI Project\ISI\CHOC\CHOC\obj\Debug\CHOC.All_Items_Form.resources
+D:\Desktop\ISI Project\ISI\CHOC\CHOC\obj\Debug\CHOC.Carebags.resources
+D:\Desktop\ISI Project\ISI\CHOC\CHOC\obj\Debug\CHOC.DistributionManagement.resources
+D:\Desktop\ISI Project\ISI\CHOC\CHOC\obj\Debug\CHOC.Item_management.resources
+D:\Desktop\ISI Project\ISI\CHOC\CHOC\obj\Debug\CHOC.CarebagManagement.resources
+D:\Desktop\ISI Project\ISI\CHOC\CHOC\obj\Debug\CHOC.Donor_management.resources
+D:\Desktop\ISI Project\ISI\CHOC\CHOC\obj\Debug\CHOC.Home.resources
+D:\Desktop\ISI Project\ISI\CHOC\CHOC\obj\Debug\CHOC.Inventory.resources
+D:\Desktop\ISI Project\ISI\CHOC\CHOC\obj\Debug\CHOC.Merchandise_Branding.resources
+D:\Desktop\ISI Project\ISI\CHOC\CHOC\obj\Debug\CHOC.Properties.Resources.resources
+D:\Desktop\ISI Project\ISI\CHOC\CHOC\obj\Debug\CHOC.Provisions.resources
+D:\Desktop\ISI Project\ISI\CHOC\CHOC\obj\Debug\CHOC.ProvisionsDonor.resources
+D:\Desktop\ISI Project\ISI\CHOC\CHOC\obj\Debug\CHOC.Provisions_Create_Item.resources
+D:\Desktop\ISI Project\ISI\CHOC\CHOC\obj\Debug\CHOC.Provisions_Out.resources
+D:\Desktop\ISI Project\ISI\CHOC\CHOC\obj\Debug\CHOC.Provisions_Report.resources
+D:\Desktop\ISI Project\ISI\CHOC\CHOC\obj\Debug\CHOC.Report.resources
+D:\Desktop\ISI Project\ISI\CHOC\CHOC\obj\Debug\CHOC.UpdateMerchandise.resources
+D:\Desktop\ISI Project\ISI\CHOC\CHOC\obj\Debug\CHOC.csproj.GenerateResource.cache
+D:\Desktop\ISI Project\ISI\CHOC\CHOC\obj\Debug\CHOC.csproj.CoreCompileInputs.cache
+D:\Desktop\ISI Project\ISI\CHOC\CHOC\obj\Debug\CHOC.exe
+D:\Desktop\ISI Project\ISI\CHOC\CHOC\obj\Debug\CHOC.pdb
