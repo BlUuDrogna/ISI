@@ -48,6 +48,7 @@ C:\Users\gvanw\Desktop\Honneurs\Semester 2\ITRI 624 (ISI)\CHOC\CHOC\CHOC\obj\Deb
 C:\Users\gvanw\Desktop\Honneurs\Semester 2\ITRI 624 (ISI)\CHOC\CHOC\CHOC\obj\Debug\CHOC.csproj.CoreCompileInputs.cache
 C:\Users\gvanw\Desktop\Honneurs\Semester 2\ITRI 624 (ISI)\CHOC\CHOC\CHOC\obj\Debug\CHOC.exe
 C:\Users\gvanw\Desktop\Honneurs\Semester 2\ITRI 624 (ISI)\CHOC\CHOC\CHOC\obj\Debug\CHOC.pdb
+<<<<<<< HEAD
 C:\Users\gvanw\Desktop\Honneurs\Semester 2\ITRI 624 (ISI)\ISI\CHOC\CHOC\bin\Debug\CHOC.exe.config
 C:\Users\gvanw\Desktop\Honneurs\Semester 2\ITRI 624 (ISI)\ISI\CHOC\CHOC\bin\Debug\CHOC.exe
 C:\Users\gvanw\Desktop\Honneurs\Semester 2\ITRI 624 (ISI)\ISI\CHOC\CHOC\bin\Debug\CHOC.pdb
@@ -73,3 +74,29 @@ C:\Users\gvanw\Desktop\Honneurs\Semester 2\ITRI 624 (ISI)\ISI\CHOC\CHOC\obj\Debu
 C:\Users\gvanw\Desktop\Honneurs\Semester 2\ITRI 624 (ISI)\ISI\CHOC\CHOC\obj\Debug\CHOC.csproj.CoreCompileInputs.cache
 C:\Users\gvanw\Desktop\Honneurs\Semester 2\ITRI 624 (ISI)\ISI\CHOC\CHOC\obj\Debug\CHOC.exe
 C:\Users\gvanw\Desktop\Honneurs\Semester 2\ITRI 624 (ISI)\ISI\CHOC\CHOC\obj\Debug\CHOC.pdb
+=======
+C:\Users\Jacques\Desktop\ISI\ISI\CHOC\CHOC\bin\Debug\CHOC.exe.config
+C:\Users\Jacques\Desktop\ISI\ISI\CHOC\CHOC\bin\Debug\CHOC.exe
+C:\Users\Jacques\Desktop\ISI\ISI\CHOC\CHOC\bin\Debug\CHOC.pdb
+C:\Users\Jacques\Desktop\ISI\ISI\CHOC\CHOC\obj\Debug\CHOC.csprojResolveAssemblyReference.cache
+C:\Users\Jacques\Desktop\ISI\ISI\CHOC\CHOC\obj\Debug\CHOC.All_Items_Form.resources
+C:\Users\Jacques\Desktop\ISI\ISI\CHOC\CHOC\obj\Debug\CHOC.Carebags.resources
+C:\Users\Jacques\Desktop\ISI\ISI\CHOC\CHOC\obj\Debug\CHOC.DistributionManagement.resources
+C:\Users\Jacques\Desktop\ISI\ISI\CHOC\CHOC\obj\Debug\CHOC.Item_management.resources
+C:\Users\Jacques\Desktop\ISI\ISI\CHOC\CHOC\obj\Debug\CHOC.CarebagManagement.resources
+C:\Users\Jacques\Desktop\ISI\ISI\CHOC\CHOC\obj\Debug\CHOC.Donor_management.resources
+C:\Users\Jacques\Desktop\ISI\ISI\CHOC\CHOC\obj\Debug\CHOC.Home.resources
+C:\Users\Jacques\Desktop\ISI\ISI\CHOC\CHOC\obj\Debug\CHOC.Inventory.resources
+C:\Users\Jacques\Desktop\ISI\ISI\CHOC\CHOC\obj\Debug\CHOC.Merchandise_Branding.resources
+C:\Users\Jacques\Desktop\ISI\ISI\CHOC\CHOC\obj\Debug\CHOC.Properties.Resources.resources
+C:\Users\Jacques\Desktop\ISI\ISI\CHOC\CHOC\obj\Debug\CHOC.Provisions.resources
+C:\Users\Jacques\Desktop\ISI\ISI\CHOC\CHOC\obj\Debug\CHOC.ProvisionsDonor.resources
+C:\Users\Jacques\Desktop\ISI\ISI\CHOC\CHOC\obj\Debug\CHOC.Provisions_Create_Item.resources
+C:\Users\Jacques\Desktop\ISI\ISI\CHOC\CHOC\obj\Debug\CHOC.Provisions_Out.resources
+C:\Users\Jacques\Desktop\ISI\ISI\CHOC\CHOC\obj\Debug\CHOC.Provisions_Report.resources
+C:\Users\Jacques\Desktop\ISI\ISI\CHOC\CHOC\obj\Debug\CHOC.Report.resources
+C:\Users\Jacques\Desktop\ISI\ISI\CHOC\CHOC\obj\Debug\CHOC.UpdateMerchandise.resources
+C:\Users\Jacques\Desktop\ISI\ISI\CHOC\CHOC\obj\Debug\CHOC.csproj.GenerateResource.Cache
+C:\Users\Jacques\Desktop\ISI\ISI\CHOC\CHOC\obj\Debug\CHOC.exe
+C:\Users\Jacques\Desktop\ISI\ISI\CHOC\CHOC\obj\Debug\CHOC.pdb
+>>>>>>> master

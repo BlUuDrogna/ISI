@@ -84,7 +84,16 @@ namespace CHOC
 
         private void BtnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult dialogResult = MessageBox.Show("Sure", "Are you sure you want to exit?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+            
         }
 
         private void Home_Activated(object sender, EventArgs e)
