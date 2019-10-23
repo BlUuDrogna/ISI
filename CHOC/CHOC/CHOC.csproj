@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D26003AF-BDF3-4B26-9E0C-E9A6E33EF2C9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CHOC</RootNamespace>
+    <AssemblyName>CHOC</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="All_Items_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="All_Items_Form.Designer.cs">
+      <DependentUpon>All_Items_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Carebags.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Carebags.Designer.cs">
+      <DependentUpon>Carebags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_carebags.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_carebags.Designer.cs">
+      <DependentUpon>Manage_carebags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Donor_management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Donor_management.Designer.cs">
+      <DependentUpon>Donor_management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory.Designer.cs">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item_management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item_management.Designer.cs">
+      <DependentUpon>Item_management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DistributionManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DistributionManagement.Designer.cs">
+      <DependentUpon>DistributionManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Merchandise_Branding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Merchandise_Branding.Designer.cs">
+      <DependentUpon>Merchandise_Branding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provisions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Provisions.Designer.cs">
+      <DependentUpon>Provisions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProvisionsDonor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProvisionsDonor.Designer.cs">
+      <DependentUpon>ProvisionsDonor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Provisions_Create_Item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Provisions_Create_Item.Designer.cs">
+      <DependentUpon>Provisions_Create_Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Provisions_Out.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Provisions_Out.Designer.cs">
+      <DependentUpon>Provisions_Out.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Provisions_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Provisions_Report.Designer.cs">
+      <DependentUpon>Provisions_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateMerchandise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateMerchandise.Designer.cs">
+      <DependentUpon>UpdateMerchandise.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="All_Items_Form.resx">
+      <DependentUpon>All_Items_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Carebags.resx">
+      <DependentUpon>Carebags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DistributionManagement.resx">
+      <DependentUpon>DistributionManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item_management.resx">
+      <DependentUpon>Item_management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_carebags.resx">
+      <DependentUpon>Manage_carebags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Donor_management.resx">
+      <DependentUpon>Donor_management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory.resx">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Merchandise_Branding.resx">
+      <DependentUpon>Merchandise_Branding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Provisions.resx">
+      <DependentUpon>Provisions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProvisionsDonor.resx">
+      <DependentUpon>ProvisionsDonor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Provisions_Create_Item.resx">
+      <DependentUpon>Provisions_Create_Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Provisions_Out.resx">
+      <DependentUpon>Provisions_Out.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Provisions_Report.resx">
+      <DependentUpon>Provisions_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateMerchandise.resx">
+      <DependentUpon>UpdateMerchandise.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
